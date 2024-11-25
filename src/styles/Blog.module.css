@@ -1,0 +1,84 @@
+/* Blog container */
+.blogContainer {
+  padding: 2rem 1rem;
+  font-family: 'Source Sans Pro', sans-serif; /* Clean sans-serif for body */
+  background-color: #f9f9f9;
+  color: #333; /* Neutral dark gray */
+}
+
+/* Blog title */
+.title {
+  font-family: 'Playfair Display', serif; /* Elegant serif for title */
+  font-size: 2.8rem; /* Larger, prominent size */
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  color: #222; /* Slightly darker gray for a sharp look */
+}
+
+/* Subtitle (if added) */
+.subtitle {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #555; /* Light gray for subtleties */
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+/* Posts container */
+.postsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Individual post styles */
+.post {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+/* Post title */
+.postTitle {
+  font-family: 'Playfair Display', serif; /* Elegant serif for post titles */
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #000; /* Black for emphasis */
+  font-weight: 600;
+}
+
+/* Date style */
+.date {
+  font-family: 'Source Sans Pro', sans-serif; /* Clean sans-serif for dates */
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* Post content */
+.content {
+  font-family: 'Source Sans Pro', sans-serif; /* Body font for readability */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444; /* Darker gray */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  .postTitle {
+    font-size: 1.5rem;
+  }
+  .content {
+    font-size: 0.9rem;
+  }
+}
+
