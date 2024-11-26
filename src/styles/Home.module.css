@@ -1,24 +1,32 @@
-/* General container */
+/* Container for the entire page */
 .homeContainer {
   font-family: 'Source Sans Pro', sans-serif;
-  padding: 2rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 2rem 1rem; /* Add padding for spacing */
+  max-width: 1200px; /* Limit max width for readability */
+  margin: 0 auto; /* Center the content */
 }
 
 /* Hero Section */
 .heroSection {
-  display: flex;
+  display: flex; /* Align image and text side by side */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
   align-items: center;
-  gap: 2rem;
+  gap: 2rem; /* Space between image and text */
   margin-bottom: 3rem;
 }
 
 .profileImage {
-  width: 150px;
+  width: 150px; /* Smaller size */
   height: 150px;
-  border-radius: 50%; /* Circular image */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 50%; /* Circle shape */
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.introText {
+  flex: 1; /* Make the text take the remaining space */
+  min-width: 280px; /* Ensure text doesn’t get too small */
 }
 
 .introText h1 {
@@ -28,80 +36,98 @@
 }
 
 .introText p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
   color: #555;
 }
 
-/* About Section */
-.aboutSection {
-  margin-bottom: 3rem;
+/* Add responsive adjustments */
+@media (max-width: 768px) {
+  .heroSection {
+    flex-direction: column; /* Stack image and text vertically */
+    text-align: center; /* Center-align text for smaller screens */
+  }
+
+  .profileImage {
+    margin: 0 auto; /* Center the image */
+  }
+
+  .introText {
+    min-width: unset;
+  }
 }
 
-.aboutSection h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.aboutSection p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #444;
-}
-
-/* Work Showcase */
-.workSection h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
+/* Work grid container */
 .workGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping */
+  gap: 1.5rem; /* Space between items */
+  justify-content: center; /* Center-align the grid items */
+  padding: 1rem 0;
+}
+
+/* Individual work item */
+.workItem {
+  text-decoration: none;
+  color: inherit;
+  width: calc(100% - 2rem); /* Default width for small screens */
+  max-width: 300px; /* Limit width for larger screens */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .workItem img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensure the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any inline spacing */
+  transition: transform 0.3s ease-in-out;
+}
+
+.workItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.workItem:hover img {
+  transform: scale(1.05); /* Subtle zoom effect */
 }
 
 .workItem p {
   font-size: 1rem;
-  margin-top: 0.5rem;
-  color: #555;
-  text-align: center;
-}
-
-/* Call-to-Action Section */
-.ctaSection {
-  text-align: center;
-  padding: 2rem;
-  background-color: #f9f9f9;
-  border-radius: 6px;
-}
-
-.ctaButtons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.ctaButton {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1rem;
   font-weight: 600;
-  color: #fff;
-  background-color: #0072ff;
-  padding: 0.8rem 1.5rem;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+  text-align: center;
+  padding: 0.8rem;
+  background-color: #f9f9f9;
+  margin: 0;
 }
 
-.ctaButton:hover {
-  background-color: #0056b3;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .workItem {
+    width: 100%; /* Full width for smaller screens */
+  }
 }
+
+/* Project title */
+.workItem .projectTitle {
+  font-size: 1.2rem; /* Slightly smaller title */
+  font-weight: bold !important; /* Bold for emphasis */
+  color: #333 !important; /* Darker text */
+  text-align: center !important;
+  margin: 0 !important; /* Remove extra margin */
+  line-height: 1.2 !important; /* Slight spacing between title and description */
+}
+
+/* Project subtext (description) */
+.workItem .projectSubText {
+  font-size: 0.85rem !important; /* Smaller, secondary text */
+  font-weight: normal !important; /* Not bold */
+  color: #666 !important; /* Softer gray for description */
+  text-align: center !important;
+  margin: 0 !important; /* No extra margin */
+  line-height: 1.4 !important; /* Proper line spacing for readability */
+}
+

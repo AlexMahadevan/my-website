@@ -1,19 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../styles/Home.module.css';
-import profileImage from '../assets/profile.jpg'; // Add a professional image here
-import workImage1 from '../assets/work1.jpg'; // Example work image
-import workImage2 from '../assets/work2.jpg'; // Example work image
+import profileImage from '../assets/profile.jpg';
+import workImage1 from '../assets/work1.jpg';
+import workImage2 from '../assets/work2.jpg';
 
 function Home() {
+  const [greeting, setGreeting] = useState('Hi');
+
+  useEffect(() => {
+    const hour = new Date().getHours();
+    if (hour < 12) setGreeting('Good Morning');
+    else if (hour < 18) setGreeting('Good Afternoon');
+    else setGreeting('Good Evening');
+  }, []);
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className={styles.homeContainer}>
       {/* Hero Section */}
       <section className={styles.heroSection}>
         <img src={profileImage} alt="Profile" className={styles.profileImage} />
         <div className={styles.introText}>
-          <h1>Hi, I'm Alex Mahadevan</h1>
+          <h1>I'm Alex Mahadevan</h1>
           <p>
-            I'm a journalist, data nerd, trainer and researcher working at the intersection of generative AI, media literacy and misinformation. I'm also a drummer, runner and smartass. 
+            I'm a journalist, data nerd, trainer and researcher working at the intersection of generative AI, media literacy and misinformation. I'm also a drummer, runner and smartass.
+          </p>
+          <p>
+            <em>Note: I am using this site as a crash course in React. So don't judge, pls.</em>
           </p>
         </div>
       </section>
@@ -22,34 +41,51 @@ function Home() {
       <section className={styles.aboutSection}>
         <h2>What I do</h2>
         <p>
-          I'm currently the director of MediaWise, a digital media literacy program based out out of the Poynter Institute.
-          I'm also on faculty, where I lead our AI Steering Committee and run workshops on emerging technologies, verification and OSINT.
-          I also write about X's Community Notes. A lot. 
+          I'm currently the director of <a href="https://poynter.org/mediawise" target="_blank">MediaWise</a>, a digital media literacy program based out out of the Poynter Institute.
+          I'm also <a href="https://www.poynter.org/news-release/2024/kristen-hare-local-news-alex-mahadevan-ai/" target="_blank">on faculty</a>, where I lead our AI Steering Committee and run workshops on emerging technologies, verification and OSINT.
+          I spend more time than I'd care to admit studying X's <a href="https://www.poynter.org/fact-checking/2023/why-twitters-community-notes-feature-mostly-fails-to-combat-misinformation/" target="_blank">Community Notes</a>.
         </p>
       </section>
 
-          {/* Work Showcase */}
-          <section className={styles.workSection}>
-        <h2>Some of My Work</h2>
-        <div className={styles.workGrid}>
-          <a href="https://example.com/project1" target="_blank" rel="noopener noreferrer" className={styles.workItem}>
-            <img src={workImage1} alt="Work 1" />
-            <p>Project 1: Media Literacy Campaign</p>
-          </a>
-          <a href="https://example.com/project2" target="_blank" rel="noopener noreferrer" className={styles.workItem}>
-            <img src={workImage2} alt="Work 2" />
-            <p>Project 2: AI-Powered Fact-Checker</p>
-          </a>
-        </div>
-      </section>
+{/* Work Showcase */}
+<section className={styles.workSection}>
+  <h2>Stuff I've done</h2>
+  <div className={styles.workGrid}>
+    <a href="https://www.poynter.org/mediawise/programs/seniors/" target="_blank" rel="noopener noreferrer" className={styles.workItem}>
+      <img src={workImage1} alt="Work 1" />
+      <p className={styles.projectTitle}>MediaWise for Seniors</p>
+      <p className={styles.projectSubText}>
+        Empowering older adults with tools to spot and stop misinformation online.
+      </p>
+    </a>
+    <a href="https://www.poynter.org/ethics-trust/2024/poynter-when-it-comes-to-using-ai-in-journalism-put-audience-and-ethics-first/" target="_blank" rel="noopener noreferrer" className={styles.workItem}>
+      <img src={workImage2} alt="Work 2" />
+      <p className={styles.projectTitle}>The Poynter Summit on AI, Ethics and Journalism</p>
+      <p className={styles.projectSubText}>
+        A groundbreaking summit addressing the ethical implications of AI in journalism.
+      </p>
+    </a>
+    <a href="/training" target="_blank" rel="noopener noreferrer" className={styles.workItem}>
+      <img src={workImage2} alt="Work 3" />
+      <p className={styles.projectTitle}>Tunisia to Bangladesh: Tons of international training</p>
+      <p className={styles.projectSubText}>
+        Delivering impactful training sessions to journalists worldwide.
+      </p>
+    </a>
+  </div>
+</section>
 
       {/* Call-to-Action */}
       <section className={styles.ctaSection}>
         <h2>Want to Learn More?</h2>
         <p>Check out my blog or get in touch with me!</p>
         <div className={styles.ctaButtons}>
-          <a href="/blog" className={styles.ctaButton}>Visit My Blog</a>
-          <a href="/contact" className={styles.ctaButton}>Contact Me</a>
+          <button className={styles.ctaButton} onClick={() => scrollToSection('blog')}>
+            Visit My Blog
+          </button>
+          <button className={styles.ctaButton} onClick={() => scrollToSection('contact')}>
+            Contact Me
+          </button>
         </div>
       </section>
     </div>

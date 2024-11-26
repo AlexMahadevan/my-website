@@ -22,6 +22,10 @@ p, span, a, li {
   color: #444; /* Slightly lighter gray */
 }
 
+.projectSubText {
+  font-weight: 400 !important;
+}
+
 /* Links */
 a {
   color: #0072ff; /* Accent blue for links */

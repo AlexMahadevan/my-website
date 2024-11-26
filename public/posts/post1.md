@@ -1,6 +1,7 @@
 ---
 title: "X’s Community Notes had a marginal, if any, impact on the election"
 date: "November 1, 2024"
+category: "Misinformation"
 ---
 
 This article was co-published with Faked Up, a newsletter about digital deception, dreck and disinformation.

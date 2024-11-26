@@ -1,6 +1,7 @@
 ---
 title: "Understanding Misinformation"
 date: "November 8, 2024"
+category: "Misinformation"
 ---
 
 Misinformation can spread like wildfire. 
