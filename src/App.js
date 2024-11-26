@@ -4,10 +4,9 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
-import Projects from './pages/Projects'; // Updated import
-import Contact from './pages/Contact';
-import Training from './pages/Training'; // Training page import
-import './styles/GlobalStyles.css'; // Import global styles
+import Training from './pages/Training';
+import Projects from './pages/Projects';
+import './styles/GlobalStyles.css';
 
 function App() {
   return (
@@ -16,9 +15,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/projects" element={<Projects />} /> {/* Updated path */}
         <Route path="/training" element={<Training />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/projects" element={<Projects />} />
       </Routes>
       <Footer />
     </Router>

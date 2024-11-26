@@ -36,3 +36,32 @@
   font-size: 1.1rem;
   margin: 0.5rem 0;
 }
+
+.counter {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.counter h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.counterNumber {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0072ff;
+}
+
+.counterSubtext {
+  font-size: 0.9rem; /* Smaller text size */
+  color: #666; /* Softer gray for secondary emphasis */
+  text-align: center;
+  margin-top: 0.5rem; /* Space between number and subtext */
+  font-style: italic; /* Optional: Italicize the text */
+}

@@ -63,7 +63,7 @@ function Home() {
       <img src={workImage2} alt="Work 2" />
       <p className={styles.projectTitle}>Poynter's work on generative AI</p>
       <p className={styles.projectSubText}>
-        My first program at Poynter was an AARP partnership that included courses, videos and social media PSAs — plus Joan Lunden — teaching older adults how to fight misinformation.
+        What started as some ad-hoc generative AI trainings I did for fun in 2023 evolved into a full-blow AI program at Poynter. 
       </p>
     </a>
     <a href="/training" target="_blank" rel="noopener noreferrer" className={styles.workItem}>
