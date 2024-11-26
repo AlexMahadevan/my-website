@@ -31,7 +31,7 @@ function Blog() {
 
   return (
     <div className={styles.blogContainer}>
-      <h1 className={styles.title}>📜 My Blog</h1>
+      <h1 className={styles.title}>Some writing</h1>
 
       {/* Search Bar */}
       <div className={styles.searchContainer}>
