@@ -15,14 +15,16 @@ L.Icon.Default.mergeOptions({
 function Training() {
   // List of training locations
   const locations = [
-    { name: 'Singapore', coords: [1.3521, 103.8198] },
-    { name: 'Seoul, South Korea', coords: [37.5665, 126.978] },
-    { name: 'Sofia, Bulgaria', coords: [42.6977, 23.3219] },
-    { name: 'Frankfurt, Germany', coords: [50.1109, 8.6821] },
-    { name: 'Istanbul, Turkey', coords: [41.0082, 28.9784] },
-    { name: 'Oslo, Norway', coords: [59.9139, 10.7522] },
-    { name: 'Tunis and Carthage, Tunisia', coords: [36.8065, 10.1815], details: 'Training investigative journalists' },
-    { name: 'Bangladesh', coords: [23.685, 90.3563] },
+    { name: 'Madrid, Spain', coords: [40.4168, -3.7038], details: 'Launch of media literacy program and research.' },
+    { name: 'Barcelona, Spain', coords: [41.3851, 2.1734], details: 'How to engage Gen Z with fact-checking.' },
+    { name: 'Sarajevo, Bosnia', coords: [43.8563, 18.4131], details: 'Integrating generative AI into fact-checking.' },
+    { name: 'Singapore', coords: [1.3521, 103.8198], details: 'Studying emerging technologies and Gen Z.' },
+    { name: 'Seoul, South Korea', coords: [37.5665, 126.978], details: 'An analysis of crowdsourced fact-checking on X.' },
+    { name: 'Sofia, Bulgaria', coords: [42.6977, 23.3219], details: 'U.S. Embassy launch of media literacy program.' },
+    { name: 'Istanbul, Turkey', coords: [41.0082, 28.9784], details: 'Launch of media literacy program and research & polarization workshop.' },
+    { name: 'Oslo, Norway', coords: [59.9139, 10.7522], details: 'Emerging technologies workshops.' },
+    { name: 'Tunis, Tunisia', coords: [36.8065, 10.1815], details: 'OSINT for investigative journalists.' },
+    { name: 'Dhaka, Bangladesh', coords: [23.8103, 90.4125], details: 'Media literacy workshops for middle and high schoolers.' },
   ];
 
   return (
