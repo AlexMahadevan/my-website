@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css';
 import profileImage from '../assets/profile.jpg';
 import workImage1 from '../assets/work1.jpg';
 import workImage2 from '../assets/work2.jpg';
+import workImage3 from '../assets/work3.jpg';
 
 function Home() {
   const [greeting, setGreeting] = useState('Hi');
@@ -55,18 +56,18 @@ function Home() {
       <img src={workImage1} alt="Work 1" />
       <p className={styles.projectTitle}>MediaWise for Seniors</p>
       <p className={styles.projectSubText}>
-        Empowering older adults with tools to spot and stop misinformation online.
+      My first program at Poynter was an AARP partnership that included courses, videos and social media PSAs — plus Joan Lunden — teaching older adults how to fight misinformation.
       </p>
     </a>
     <a href="https://www.poynter.org/ethics-trust/2024/poynter-when-it-comes-to-using-ai-in-journalism-put-audience-and-ethics-first/" target="_blank" rel="noopener noreferrer" className={styles.workItem}>
       <img src={workImage2} alt="Work 2" />
-      <p className={styles.projectTitle}>The Poynter Summit on AI, Ethics and Journalism</p>
+      <p className={styles.projectTitle}>Poynter's work on generative AI</p>
       <p className={styles.projectSubText}>
-        A groundbreaking summit addressing the ethical implications of AI in journalism.
+        My first program at Poynter was an AARP partnership that included courses, videos and social media PSAs — plus Joan Lunden — teaching older adults how to fight misinformation.
       </p>
     </a>
     <a href="/training" target="_blank" rel="noopener noreferrer" className={styles.workItem}>
-      <img src={workImage2} alt="Work 3" />
+      <img src={workImage3} alt="Work 3" />
       <p className={styles.projectTitle}>Tunisia to Bangladesh: Tons of international training</p>
       <p className={styles.projectSubText}>
         Delivering impactful training sessions to journalists worldwide.
@@ -81,7 +82,7 @@ function Home() {
   <p>I'm always down to chat about media literacy, misinformation and generative AI. Find me at any of these places to partner on something cool, put me on a panel or for an interview.</p>
   <div className={styles.ctaLinks}>
     <a href="mailto:alex@poynter.org" className={styles.ctaLink}>
-      📧 Email me: alex@poynter.org
+      📧 Email me
     </a>
     <a
       href="https://www.linkedin.com/in/alexmahadevan/"

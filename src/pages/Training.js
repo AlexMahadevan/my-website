@@ -53,15 +53,6 @@ function Training() {
         ))}
       </MapContainer>
 
-      {/* Location List */}
-      <ul className={styles.locationList}>
-        {locations.map((location, index) => (
-          <li key={index}>
-            <strong>{location.name}</strong>
-            {location.details && ` - ${location.details}`}
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }
