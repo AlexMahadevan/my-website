@@ -1,33 +1,44 @@
 .navbar {
+    background-color: #ffffff; /* White background */
+    border-bottom: 1px solid #ddd; /* Thin line to separate navbar */
+    padding: 1rem 2rem; /* Add padding for spacing */
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center the links */
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: #0072ff;
-    color: white;
-  }
-  
-  .navbar-logo a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
+    position: sticky; /* Keeps navbar fixed at the top */
+    top: 0;
+    z-index: 1000; /* Ensures it stays above content */
   }
   
   .navbar-links {
-    list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem; /* Space between links */
   }
   
-  .navbar-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+  .navbar-links a {
+    text-decoration: none; /* Remove underline */
+    color: #000; /* Black text */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: 500; /* Slightly bold */
+    transition: color 0.3s ease; /* Smooth hover effect */
   }
   
-  .navbar-links li a:hover {
-    color: #ddd;
+  .navbar-links a:hover {
+    color: #0072ff; /* Highlight color on hover */
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 0.8rem 1rem; /* Adjust padding for smaller screens */
+    }
+  
+    .navbar-links {
+      gap: 1rem; /* Reduce space between links */
+    }
+  
+    .navbar-links a {
+      font-size: 0.9rem; /* Slightly smaller font size */
+    }
   }
   

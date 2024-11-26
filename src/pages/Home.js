@@ -77,17 +77,30 @@ function Home() {
 
       {/* Call-to-Action */}
       <section className={styles.ctaSection}>
-        <h2>Want to Learn More?</h2>
-        <p>Check out my blog or get in touch with me!</p>
-        <div className={styles.ctaButtons}>
-          <button className={styles.ctaButton} onClick={() => scrollToSection('blog')}>
-            Visit My Blog
-          </button>
-          <button className={styles.ctaButton} onClick={() => scrollToSection('contact')}>
-            Contact Me
-          </button>
-        </div>
-      </section>
+  <h2>Reach out</h2>
+  <p>I'm always down to chat about media literacy, misinformation and generative AI. Find me at any of these places to partner on something cool, put me on a panel or for an interview.</p>
+  <div className={styles.ctaLinks}>
+    <a href="mailto:alex@poynter.org" className={styles.ctaLink}>
+      📧 Email me: alex@poynter.org
+    </a>
+    <a
+      href="https://www.linkedin.com/in/alexmahadevan/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={styles.ctaLink}
+    >
+      💼 Connect on LinkedIn
+    </a>
+    <a
+      href="https://bsky.app/profile/alexmahadevan.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={styles.ctaLink}
+    >
+      🌐 Follow me on Bluesky
+    </a>
+  </div>
+</section>
     </div>
   );
 }
