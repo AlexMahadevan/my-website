@@ -1,8 +1,9 @@
 ---
-title: "Understanding Misinformation"
-date: "November 8, 2024"
+title: "Fact-checking is free speech — and essential to market economies"
+dek: "The politicians and pundits attacking fact-checkers and misinformation research claim to love capitalism. Then should love fact-checking."
+date: "Nov. 8, 2024"
 category: "Misinformation"
+slug: "understanding-misinformation"
 ---
 
-Misinformation can spread like wildfire. 
-Knowing how to spot it and counter it is key to informed decision-making.
+Misinformation leads to market failures. 

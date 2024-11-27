@@ -1,30 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import ReactMarkdown from 'react-markdown';
+import React from 'react';
+import { BlueskyComments } from 'bluesky-comments';
 
-function BlogPost({ file }) {
-  const [content, setContent] = useState('');
-
-  useEffect(() => {
-    fetch(process.env.PUBLIC_URL + file) // Ensure it fetches from the public folder
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Failed to load file');
-        }
-        return response.text();
-      })
-      .then((text) => setContent(text))
-      .catch((error) => {
-        console.error('Error fetching markdown:', error);
-        setContent('# Error\nUnable to load content.');
-      });
-  }, [file]);
-
+function BlogPost({ post }) {
   return (
-    <div>
-      <ReactMarkdown>{content}</ReactMarkdown>
+    <div className="blog-post">
+      <h1>{post.title}</h1>
+      <p>{post.date}</p>
+      <div dangerouslySetInnerHTML={{ __html: post.content }} />
+
+      {/* Bluesky Comments Section */}
+      <div style={{ marginTop: '2rem' }}>
+        <h2>Comments</h2>
+        <BlueskyComments threadUrl={`https://bsky.app/profile/alexmahadevan.com/post/${post.slug}`} />
+      </div>
     </div>
   );
 }
 
 export default BlogPost;
-

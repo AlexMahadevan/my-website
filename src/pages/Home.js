@@ -70,7 +70,7 @@ function Home() {
       <img src={workImage3} alt="Work 3" />
       <p className={styles.projectTitle}>Tunisia to Bangladesh: Tons of international training</p>
       <p className={styles.projectSubText}>
-        Delivering impactful training sessions to journalists worldwide.
+        I've spent the last five years teaching media literacy, verification, OSINT and generative AI to a variety of audiences around the world.
       </p>
     </a>
   </div>
@@ -98,7 +98,7 @@ function Home() {
       rel="noopener noreferrer"
       className={styles.ctaLink}
     >
-      🌐 Follow me on Bluesky
+      🦋 Follow me on Bluesky
     </a>
   </div>
 </section>

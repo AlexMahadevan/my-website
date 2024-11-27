@@ -17,7 +17,7 @@ function Training() {
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
-    const target = 16500; // Replace with your actual target number
+    const target = 9250; // Replace with your actual target number
     const increment = Math.ceil(target / 100); // Increment value
     let current = 0;
 
@@ -62,6 +62,13 @@ function Training() {
         I've been lucky to run workshops and programs in dozens of cities around the world on everything from generative AI to TikTok and reaching Gen Z.
       </p>
 
+      {/* Counter Above Map */}
+      <div className={styles.counter}>
+        <h2>Journalists and citizens trained</h2>
+        <p className={styles.counterNumber}>{counter.toLocaleString()}</p>
+        <p className={styles.counterSubtext}>Based on in-person and virtual workshops around the world.</p>
+      </div>
+
       {/* Interactive Map */}
       <MapContainer
         center={[20, 10]} // Starting view centered on a global perspective
@@ -82,13 +89,6 @@ function Training() {
           </Marker>
         ))}
       </MapContainer>
-
-      {/* Counter Below Map */}
-      <div className={styles.counter}>
-  <h2>Journalists and citizens trained</h2>
-  <p className={styles.counterNumber}>{counter.toLocaleString()}</p>
-  <p className={styles.counterSubtext}>Based on in-person and virtual workshops around the world.</p>
-</div>
     </div>
   );
 }
